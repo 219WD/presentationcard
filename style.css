@@ -1,0 +1,123 @@
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: url('/assets/16.jpg') no-repeat center center/cover;
+        }
+
+        .card-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: url('https://images.pexels.com/photos/247791/pexels-photo-247791.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+        }
+
+        .card-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 255, 0.5); /* Filtro azul */
+            z-index: 1;
+        }
+
+        .card {
+            width: 100%;
+            width: 300px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            padding-top: 70px; /* Adjusted padding-top to make room for the profile image */
+        }
+
+        .img-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            position: absolute;
+            top: -70px; /* Adjusted position */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .profile-image{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        
+
+        .content {
+            padding: 20px;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .profession {
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-buttons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #3b5998; /* Color predeterminado (Facebook) */
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .social-buttons a:hover {
+            background: #2d4373; /* Color al pasar el cursor */
+        }
+
+        @media (max-width: 600px) {
+            .profile-image {
+                width: 150px;
+                height: 150px;
+                top: -70px; /* Adjusted position */
+            }
+
+            .name {
+                font-size: 35px;
+            }
+
+            .profession {
+                font-size: 24px;
+            }
+            .social-buttons a {
+                width: 50px;
+                height: 50px;
+                font-size: 1.4rem;
+            }
+        }
